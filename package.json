@@ -1,0 +1,31 @@
+{
+  "name": "css-sort",
+  "version": "0.0.1",
+  "description": "A command line Node JS app for sorting CSS rules",
+  "main": "index.js",
+  "bin": {
+    "css-sort": "bin/css-sort"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nachitox/css-sort.git"
+  },
+  "dependencies": {
+    "commander": "2.x.x",
+    "css-parse": "2.x.x",
+    "specificity": ">=0.2.x"
+  },
+  "keywords": [
+    "css",
+    "sort"
+  ],
+  "author": "Ignacio Colautti <nachitox2000@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nachitox/css-sort/issues"
+  },
+  "homepage": "https://github.com/nachitox/css-sort#readme"
+}

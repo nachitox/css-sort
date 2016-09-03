@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+'use strict';
+
+(function () {
+	var program = require('commander'),
+	data = require('../package.json'),
+	CSSSort = require('../lib/css-sort');
+	
+	var buffer = '';
+	
+	process.title = data.name;
+
+	program
+		.version(data.version)
+		.usage('-i <file or URL> -o <file> [options]')
+		.option('-i, --input <filename>', '<filename> to be processed')
+		.option('-o, --output <filename>', '<filename> to be outputted')
+		.option('-v, --verbose', 'output activity messages')
+		.parse(process.argv);
+
+	if (program.args.length)
+	{
+		if (program.input !== undefined && program.output !== undefined) 
+			var csspurge = new CSSPurge(program.input, program.output, {"verbose": program.verbose});
+		else
+			console.log('You need to specify an input and output css files');
+	}
+
+}());
